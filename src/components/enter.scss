@@ -1,0 +1,64 @@
+@import './null.scss';
+
+.enterWrapper {
+   div {
+
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+      h2 {
+         font-family: $font;
+            @include fontP(normal, 700, 18px, 20px);
+            color: $colorTextMain;
+            margin: 4px 0px;
+      }
+
+      .enter {
+
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-self: center;
+
+            input {
+               border: 1px solid $colorText;
+               border-radius: 5px;
+               padding: 10px 40px;
+               margin: 10px 0;
+               outline: none;
+               &:hover {
+                  border: 1px solid $colorButton;
+               }
+               &:active {
+                  border: 2px solid $colorButton;
+                  
+               }
+            }
+
+            a {
+               margin: 20px 0;
+               font-family: $font;
+            @include fontP(normal, 600, 14px, 16px);
+            color: $colorTextMain;
+            &:hover {
+               @include fontP(normal, 700, 14px, 16px);
+               color: $colorButton;
+            }
+           
+
+            }
+
+            button {
+               @extend %button;
+               margin: 10px 0;
+   
+            }
+         
+
+      }
+   }
+}

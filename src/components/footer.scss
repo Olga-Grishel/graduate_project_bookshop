@@ -1,0 +1,49 @@
+@import './null.scss';
+
+.footer {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ 
+   margin: 20px 0;
+  background-color: $colorButton;
+   height: 100px;
+
+   .logo {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+     
+
+      img {
+         height: 40px;
+      }
+
+      p {
+         @include fontP(normal, 700, 24px, 29px);
+         color: #FFF;
+      }
+   }
+
+   
+
+      a {
+         font-family: $font;
+         @include fontP(normal, 700, 10px, 12px);
+                 padding: 10px 5px;
+         color: #FFF;
+
+         &:hover {
+            color: rgb(223, 169, 209);
+            @include fontP(bold, 700, 12px, 12px);
+         }
+      }
+
+      p {
+         color: #FFF;
+      }
+   
+
+
+   
+}

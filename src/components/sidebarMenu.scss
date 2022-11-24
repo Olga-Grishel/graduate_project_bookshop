@@ -1,0 +1,40 @@
+@import './null.scss';
+
+
+.sidebarMenu {
+  
+   background-color: #EFEEF6;
+   margin-bottom: 20px;
+  
+   li {
+      padding: 10px 40px;
+      
+      &:last-child {
+         padding-bottom: 50px;
+      }
+      &:first-child {
+         padding-top: 50px;
+      }
+      
+
+   a {
+      font-family: $font;
+         @include fontP(normal, 500, 12px, 15px);
+         color: $colorText;
+         
+         text-transform: uppercase;
+         &:hover {
+            color: $colorTextMain;
+            @include fontP(bold, 700, 12px, 12px);
+           
+         }
+         
+         &:active {
+            color: $colorTextMain;
+            @include fontP(bold, 700, 12px, 12px);
+            
+         }
+        
+}
+}
+}

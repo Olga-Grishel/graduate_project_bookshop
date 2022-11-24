@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Routes, Route, useSearchParams } from "react-router-dom";
+import { BannerSale } from "./components/bannerSale";
+import { CardCategorie } from "./components/cards/cardCategorie";
+import { Header } from "./components/header";
+import { SidebarMenu } from "./components/sidebarMenu";
+import './app.scss';
+import { Drawer } from "./components/drawer";
+import { Footer } from "./components/footer";
+import { Enter } from "./components/enter";
+import { useState } from "react";
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   const [drawerOpened, setDrawerOpened] = useState(false);
+    return (<div>
+     {drawerOpened && <Drawer onClose = {() => setDrawerOpened(false)}/> } 
+      
+      <Header onClickDrawer = {() => setDrawerOpened(true)} />
+      <BannerSale />
+     
+      <div className="main">
+        <SidebarMenu />
+        
+       <CardCategorie />
+      </div>
+      <Enter />
+      <Footer />
+    
     </div>
-  );
+
+    );
 }
 
 export default App;

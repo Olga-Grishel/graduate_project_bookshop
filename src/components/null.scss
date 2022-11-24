@@ -1,0 +1,58 @@
+* {
+   padding: 0px;
+   margin: 0px;
+   border: 0px;
+}
+
+$font: 'Montserrat', sans-serif;
+$colorTextMain:  #1C2A39;
+$colorText:  #5C6A79;
+$colorButton: #4C3DB2;
+
+
+
+
+
+@mixin fontP($Pstyle, $Pweight, $Psize, $Pline-height) {
+   font-style: $Pstyle;
+   font-weight: $Pweight;
+   font-size: $Psize;
+   line-height: $Pline-height;
+}
+
+%button {
+   font-family: $font;
+   @include fontP(normal, 700, 10px, 12px);
+   color: $colorButton;
+   background: none;
+   border: 1px solid $colorButton;
+   padding: 18px 40px;
+   text-transform: uppercase;
+   
+   &:hover {
+      color: #FFF;
+      background: $colorButton;
+
+   }
+
+}
+
+
+
+a,
+a:visited,
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+
+
+p {
+   font-family: $font;
+   color: $colorTextMain;
+}
+
