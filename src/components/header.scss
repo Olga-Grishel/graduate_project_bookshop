@@ -1,9 +1,11 @@
 @import './null.scss';
 
+
 .header {
    display: flex;
    justify-content: space-around;
    align-items: center;
+   
 
    .logo {
       display: flex;
@@ -32,9 +34,14 @@
          padding: 10px 5px;
 
          &:hover {
-            color: $colorTextMain;
+            color: $colorButton;
             @include fontP(bold, 700, 12px, 12px);
          }
+         &:active {
+            color: $colorButton;
+            @include fontP(bold, 700, 12px, 12px);
+         }
+         
       }
    }
 
@@ -43,16 +50,20 @@
       display: flex;
       gap: 20px;
 
-      svg {
+      .profileIcon {
+         width: 30px;
          height: 30px;
          fill: $colorText;
-         padding: 20px 20px;
+         padding: 10px 0px;
+         
 
          &:hover {
-            fill: $colorTextMain;
-            stroke: $colorTextMain;
+            fill: $colorButton;
+           stroke: 1;
 
          }
       }
    }
 }
+
+

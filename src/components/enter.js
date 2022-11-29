@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import './enter.scss';
 
-export const Enter = () => {
+export const Enter = ({onClose}) => {
    
    return (
       <div className="enterWrapper">
@@ -13,6 +13,7 @@ export const Enter = () => {
         <Link>Забыли пароль?</Link>
          <button>Войти</button>
          <button>Зарегистрироваться</button>
+         <button onClick={onClose}>Закрыть</button>
       </form>
          </div>
       </div>

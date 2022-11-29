@@ -8,7 +8,7 @@ import {  Link} from "react-router-dom";
 export const Footer = () => {
    return (
       <footer className="footer">
-         <Link className="logo" href='#' >
+         <Link  to='/' className="logo" href='#' >
             <img src='./img/logo.png' alt='logo' />
             <p>Книжная лавка</p>
          </Link>
